@@ -1,0 +1,18 @@
+[
+{"id":1,"name":"Tomate italiano","cat":"legumes","price":8.9,"unit":"kg","emoji":"🍅","color":"#E8412F","tag":"Colhido hoje"},
+{"id":2,"name":"Banana prata","cat":"frutas","price":6.5,"unit":"kg","emoji":"🍌","color":"#F2B705"},
+{"id":3,"name":"Maçã gala","cat":"frutas","price":9.9,"unit":"kg","emoji":"🍎","color":"#D62839"},
+{"id":4,"name":"Abacate","cat":"frutas","price":7.8,"unit":"un","emoji":"🥑","color":"#5B8C2A","tag":"Da estação"},
+{"id":5,"name":"Cenoura","cat":"legumes","price":5.4,"unit":"kg","emoji":"🥕","color":"#F28C28"},
+{"id":6,"name":"Brócolis","cat":"verduras","price":7.2,"unit":"un","emoji":"🥦","color":"#2E7D32","tag":"Orgânico"},
+{"id":7,"name":"Alface crespa","cat":"verduras","price":3.5,"unit":"un","emoji":"🥬","color":"#4CAF50","tag":"Orgânico"},
+{"id":8,"name":"Limão tahiti","cat":"frutas","price":6.9,"unit":"kg","emoji":"🍋","color":"#C6C21A"},
+{"id":9,"name":"Morango","cat":"frutas","price":12.9,"unit":"bandeja","emoji":"🍓","color":"#E0245E","tag":"Colhido hoje"},
+{"id":10,"name":"Batata inglesa","cat":"legumes","price":5.9,"unit":"kg","emoji":"🥔","color":"#B08350"},
+{"id":11,"name":"Cebola","cat":"legumes","price":4.8,"unit":"kg","emoji":"🧅","color":"#C77DA3"},
+{"id":12,"name":"Milho verde","cat":"legumes","price":2.5,"unit":"un","emoji":"🌽","color":"#E9B000"},
+{"id":13,"name":"Uva sem semente","cat":"frutas","price":14.9,"unit":"kg","emoji":"🍇","color":"#7B3FA0"},
+{"id":14,"name":"Abacaxi pérola","cat":"frutas","price":8.5,"unit":"un","emoji":"🍍","color":"#E0A100","tag":"Da estação"},
+{"id":15,"name":"Pimentão vermelho","cat":"legumes","price":11.9,"unit":"kg","emoji":"🫑","color":"#C62828"},
+{"id":16,"name":"Cheiro-verde","cat":"verduras","price":2.9,"unit":"maço","emoji":"🌿","color":"#388E3C","tag":"Orgânico"}
+]

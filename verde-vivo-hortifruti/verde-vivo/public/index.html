@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Verde Vivo — Hortifruti com entrega no mesmo dia</title>
+<meta name="description" content="Frutas, legumes e verduras frescas, colhidas hoje e entregues na sua porta.">
+<meta name="theme-color" content="#14361f">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥬</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top" id="top">
+  <a class="logo" href="#top" aria-label="Verde Vivo, início"><span>🥬</span>Verde Vivo</a>
+  <nav aria-label="Principal"><a href="#loja">Loja</a><a href="#entrega">Entrega</a><a href="#contato">Contato</a></nav>
+  <button class="cart-btn" id="openCart" aria-label="Abrir cesta">Cesta <b id="cartCount">0</b></button>
+</header>
+<main>
+<section class="hero">
+  <div class="hero-text">
+    <h1>Colhido de manhã,<br>na sua mesa à tarde.</h1>
+    <p>Frutas, legumes e verduras direto de produtores da região. Monte a cesta, escolha o pagamento e receba em casa.</p>
+    <div class="hero-cta"><a class="btn" href="#loja">Montar minha cesta</a><a class="btn ghost" href="#entrega">Ver entrega</a></div>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    <span style="--c:#E8412F;--d:0">🍅</span><span style="--c:#F2B705;--d:1">🍌</span><span style="--c:#4CAF50;--d:2">🥬</span>
+    <span style="--c:#F28C28;--d:3">🥕</span><span style="--c:#7B3FA0;--d:4">🍇</span><span style="--c:#5B8C2A;--d:5">🥑</span>
+  </div>
+</section>
+<section class="shop" id="loja">
+  <div class="shop-head">
+    <h2>Direto da horta</h2>
+    <label class="search"><span class="sr">Buscar produto</span><input id="search" type="search" placeholder="Buscar tomate, banana…" autocomplete="off"></label>
+  </div>
+  <div class="chips" id="chips" aria-label="Categorias"></div>
+  <div class="grid" id="grid" aria-live="polite"><p class="state">Carregando produtos…</p></div>
+</section>
+<section class="info" id="entrega">
+  <h2>Como entregamos</h2>
+  <div class="info-grid">
+    <article><h3>Mesmo dia</h3><p>Pedidos feitos até as 14h chegam hoje. Depois disso, entregamos amanhã cedo.</p></article>
+    <article><h3>Frete grátis acima de R$ 80</h3><p>Abaixo disso, a entrega custa R$ 8,00 em toda a cidade.</p></article>
+    <article><h3>Pague como preferir</h3><p>Pix, cartão na maquininha ou dinheiro na entrega.</p></article>
+    <article><h3>Veio fora do ponto? A gente troca</h3><p>Avise na hora da entrega e repomos o item sem custo.</p></article>
+  </div>
+</section>
+</main>
+<footer id="contato">
+  <div><strong>Verde Vivo Hortifruti</strong><p>Rua das Hortas, 120 — Centro<br>Seg a sáb, 7h às 19h</p></div>
+  <div><p>WhatsApp: (11) 99999-0000<br>contato@verdevivo.com.br</p></div>
+</footer>
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-hidden="true" aria-label="Sua cesta">
+  <div class="drawer-head"><h2>Sua cesta</h2><button class="x" id="closeCart" aria-label="Fechar cesta">✕</button></div>
+  <div class="drawer-body" id="cartBody"></div>
+  <form class="checkout" id="checkout" hidden novalidate>
+    <label>Nome<input name="name" required autocomplete="name"></label>
+    <label>Telefone<input name="phone" required inputmode="tel" autocomplete="tel" placeholder="(11) 99999-0000"></label>
+    <label>Endereço de entrega<input name="address" required autocomplete="street-address"></label>
+    <label>Observações<input name="note" placeholder="Ex.: bananas mais verdes"></label>
+    <label>Pagamento<select name="pay"><option value="pix">Pix</option><option value="cartao">Cartão na entrega</option><option value="dinheiro">Dinheiro</option></select></label>
+    <p class="err" id="formErr" role="alert"></p>
+  </form>
+  <div class="drawer-foot" id="cartFoot"></div>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+<script src="js/app.js"></script>
+</body>
+</html>
