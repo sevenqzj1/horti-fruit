@@ -56,7 +56,9 @@ function change(id, d) {
   save(); renderCart();
 }
 async function submit() {
-  const f = $('#checkout'), err = $('#formErr'), d = Object.fromEntries(new FormData(f));
+  const f = $('#checkout'), err = $('#formErr');
+  if (!f.reportValidity()) return;
+  const d = Object.fromEntries(new FormData(f));
   d.items = Object.entries(cart).map(([id, qty]) => ({ id: +id, qty }));
   const btn = $('#go'); btn.disabled = true; btn.textContent = 'Enviando…'; err.textContent = '';
   try {
@@ -86,5 +88,5 @@ $('#search').addEventListener('input', e => { q = e.target.value.trim().toLowerC
 
 renderChips();
 fetch('/api/products').then(r => r.json()).then(p => { products = p; renderGrid(); renderCart(); })
-  .catch(() => { $('#grid').innerHTML = '<p class="state">Não foi possível carregar os produtos. Inicie o servidor com <code>node server.js</code>.</p>'; });
+  .catch(() => { $('#grid').innerHTML = '<p class="state">Não foi possível carregar os produtos. Atualize a página ou tente novamente mais tarde.</p>'; });
 })();
