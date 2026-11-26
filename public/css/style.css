@@ -85,3 +85,17 @@ footer strong{color:#fff;font:800 1.2rem var(--f-d)}
 @media(max-width:860px){.hero{grid-template-columns:1fr}.hero-art{max-width:420px}.top nav{display:none}.grid{grid-template-columns:repeat(2,1fr)}.stage{height:100px;font-size:3.6rem}.tag{top:22px;left:22px}}
 @media(max-width:380px){.grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+
+/* Fotografia real de hortifruti */
+.hero-photo{position:relative;min-height:320px;aspect-ratio:1.22;overflow:hidden;border-radius:32px 32px 32px 8px;background:#315b35;box-shadow:0 24px 60px rgba(0,0,0,.22)}
+.hero-photo::after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(8,28,13,.62));pointer-events:none}
+.hero-photo img{display:block;width:100%;height:100%;min-height:320px;object-fit:cover}
+.photo-note{position:absolute;z-index:1;left:22px;bottom:20px;color:#fff;font:600 clamp(1rem,2vw,1.35rem) var(--f-d);text-shadow:0 2px 12px rgba(0,0,0,.35)}
+.stage{height:172px;padding:8px;background:#fff;overflow:hidden}
+.stage img{display:block;width:100%;height:100%;object-fit:cover;border-radius:calc(var(--r) - 12px);transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
+.card:hover .stage img{transform:scale(1.06)}
+.line .em{width:54px;height:54px;overflow:hidden;border-radius:13px;background:#fff}
+.line .em img{display:block;width:100%;height:100%;object-fit:cover}
+@media(max-width:860px){.hero-photo{max-width:560px;min-height:250px}.hero-photo img{min-height:250px}.stage{height:125px}}
+@media(prefers-reduced-motion:reduce){.stage img{transition:none}}

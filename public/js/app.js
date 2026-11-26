@@ -18,7 +18,7 @@ function renderGrid() {
   $('#grid').innerHTML = list.length ? list.map(p => `
     <article class="card" style="--c:${p.color}" data-id="${p.id}">
       ${p.tag ? `<span class="tag">${p.tag}</span>` : ''}
-      <div class="stage" aria-hidden="true">${p.emoji}</div>
+      <div class="stage"><img src="${p.image}" alt="Fotografia real de ${p.name}" loading="lazy" decoding="async"></div>
       <h3>${p.name}</h3>
       <p class="price"><b>${money(p.price)}</b> / ${p.unit}</p>
       <button class="add" data-add="${p.id}" aria-label="Adicionar ${p.name} à cesta">Adicionar</button>
@@ -37,7 +37,7 @@ function renderCart() {
   if (ok) { body.innerHTML = `<div class="done"><span>🎉</span><h3>Pedido #${ok.id} recebido!</h3><p>Total ${money(ok.total)}. A equipe da loja entrará em contato para confirmar os detalhes da entrega.</p></div>`; foot.innerHTML = '<button class="btn" id="newOrder">Fazer novo pedido</button>'; return; }
   if (!ids.length) { body.innerHTML = '<div class="empty"><span>🧺</span><p>Sua cesta está vazia.<br>Escolha algo da horta para começar.</p></div>'; foot.innerHTML = ''; return; }
   body.hidden = step === 'checkout' && false;
-  body.innerHTML = ids.map(id => { const p = byId(id); return `<div class="line"><span class="em">${p.emoji}</span><div><strong>${p.name}</strong><br><small>${money(p.price)} / ${p.unit}</small></div>
+  body.innerHTML = ids.map(id => { const p = byId(id); return `<div class="line"><span class="em"><img src="${p.image}" alt="" loading="lazy" decoding="async"></span><div><strong>${p.name}</strong><br><small>${money(p.price)} / ${p.unit}</small></div>
     <div class="qty"><button data-dec="${id}" aria-label="Diminuir">−</button><span>${cart[id]}</span><button data-inc="${id}" aria-label="Aumentar">+</button></div></div>`; }).join('');
   const t = totals(), left = FREE_FROM - t.sub;
   foot.innerHTML = `<div class="row"><span>Subtotal</span><span>${money(t.sub)}</span></div>
