@@ -34,7 +34,7 @@ function renderCart() {
   $('#cartCount').textContent = count;
   const body = $('#cartBody'), foot = $('#cartFoot'), form = $('#checkout');
   form.hidden = step !== 'checkout' || !ids.length;
-  if (ok) { body.innerHTML = `<div class="done"><span>🎉</span><h3>Pedido #${ok.id} recebido!</h3><p>Total ${money(ok.total)}. Vamos separar tudo fresquinho e avisar pelo WhatsApp quando sair para entrega.</p></div>`; foot.innerHTML = '<button class="btn" id="newOrder">Fazer novo pedido</button>'; return; }
+  if (ok) { body.innerHTML = `<div class="done"><span>🎉</span><h3>Pedido #${ok.id} recebido!</h3><p>Total ${money(ok.total)}. A equipe da loja entrará em contato para confirmar os detalhes da entrega.</p></div>`; foot.innerHTML = '<button class="btn" id="newOrder">Fazer novo pedido</button>'; return; }
   if (!ids.length) { body.innerHTML = '<div class="empty"><span>🧺</span><p>Sua cesta está vazia.<br>Escolha algo da horta para começar.</p></div>'; foot.innerHTML = ''; return; }
   body.hidden = step === 'checkout' && false;
   body.innerHTML = ids.map(id => { const p = byId(id); return `<div class="line"><span class="em">${p.emoji}</span><div><strong>${p.name}</strong><br><small>${money(p.price)} / ${p.unit}</small></div>
