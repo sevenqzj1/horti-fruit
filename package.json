@@ -1,0 +1,1 @@
+{ "name": "verde-vivo", "version": "1.0.0", "description": "Site de hortifruti: frontend + backend sem dependências", "main": "server.js", "scripts": { "start": "node server.js" }, "engines": { "node": ">=18" } }
